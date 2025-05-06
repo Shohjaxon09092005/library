@@ -1,0 +1,145 @@
+.orders-page {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.orders-page h2 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 5px solid #007bff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.order-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.status select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status.Yangi select {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.status.Jarayonda select {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status.Yakunlangan select {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.order-actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e53935;
+  transition: color 0.2s ease;
+}
+
+.order-actions button:hover {
+  color: #b71c1c;
+}
+
+/* Responsivlik */
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .status,
+  .order-actions {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .order-actions {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .status select {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+  }
+
+  .order-actions button {
+    font-size: 1rem;
+  }
+}

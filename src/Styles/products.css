@@ -1,0 +1,133 @@
+
+.dashboard-container h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.dashboard-container .form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.dashboard-container .form input,
+.form select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background-color: #388e3c;
+}
+
+.search-input {
+  padding: 0.6rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.01);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.book-card p {
+  margin: 0.4rem 0;
+}
+
+.book-card button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  color: #1565c0;
+}
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form input,
+  .form select,
+  .form button {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .book-card {
+    font-size: 0.95rem;
+  }
+
+  .book-list {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+ .dashboard-container h2 {
+    font-size: 1.3rem;
+  }
+
+ .dashboard-container .form {
+    gap: 0.8rem;
+  }
+
+ .dashboard-container .form input,
+  .form select {
+    font-size: 0.95rem;
+  }
+
+ .dashboard-container .form button {
+    font-size: 1rem;
+  }
+
+ .dashboard-container .book-card h3 {
+    font-size: 1.1rem;
+  }
+}
