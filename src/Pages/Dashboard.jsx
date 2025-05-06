@@ -5,6 +5,7 @@ import Sidebar from '../Components/Sidebar';
 function Dashboard() {
   const [books, setBooks] = useState([]);
   const [categoryCounts, setCategoryCounts] = useState({});
+  console.log(books)
 
   useEffect(() => {
     const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
